@@ -17,7 +17,7 @@ A reporting tool that will use information from the database to discover what ki
   * [VirtualBox](https://www.virtualbox.org/)
 
 
- ##Usage
+ ## Usage
 
 	* Download or Clone [fullstack-nanodegree-vm](https://github.com/udacity/fullstack-nanodegree-vm) repository.
 
@@ -43,7 +43,7 @@ A reporting tool that will use information from the database to discover what ki
 ## Running
 	*  Run `python reporting_tool.py`
 
- ##Output
+ ## Output
 
 	```
 	The most popular three articles of all time:
