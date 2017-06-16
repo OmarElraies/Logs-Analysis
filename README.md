@@ -22,6 +22,8 @@ A reporting tool that will use information from the database to discover what ki
   * Download or Clone [fullstack-nanodegree-vm](https://github.com/udacity/fullstack-nanodegree-vm) repository.
 
   * Download or Clone [Logs-Analysis](https://github.com/OmarElraies/Logs-Analysis) repository.
+  
+  * Download the [data](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) from here.
 
   * Unzip this file after downloading it put the `reporting_tool.py` file and `newsdata.sql` file in vagrant diretory
 
