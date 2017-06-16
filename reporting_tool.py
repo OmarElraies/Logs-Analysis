@@ -17,13 +17,13 @@ def print_popular_articles():
 
     # Define the query to execute
     query = '''
-			SELECT articles.title, count(*) as views
-				FROM articles, log
-			where log.path =  CONCAT('/article/', articles.slug)
-				and log.status = '200 OK'
-			group by articles.title
-			order by views desc
-			limit 3;
+	SELECT articles.title, count(*) as views
+	FROM articles, log
+	where log.path =  CONCAT('/article/', articles.slug)
+	and log.status = '200 OK'
+	group by articles.title
+	order by views desc
+	limit 3;
 	'''
     # execute our Query
     cursor.execute(query)
@@ -51,13 +51,13 @@ def print_popular_authors():
 
     # Define the query to execute
     query = '''
-			SELECT authors.name, count(*) as views
-			FROM authors,articles, log
-			where log.path =  CONCAT('/article/', articles.slug)
-				and log.status = '200 OK'
-				and articles.author = authors.id
-			group by authors.name
-			order by views desc limit 4;
+		SELECT authors.name, count(*) as views
+		  FROM authors,articles, log
+		where log.path =  CONCAT('/article/', articles.slug)
+		  and log.status = '200 OK'
+		  and articles.author = authors.id
+		group by authors.name
+		order by views desc limit 4;
 	'''
     # execute our Query
     cursor.execute(query)
@@ -87,16 +87,15 @@ def print_error_days():
     # Define the query to execute
 
     query = '''
-		SELECT day, round((error * 1.0/total)*100, 1) as percent
-		from
-			(SELECT date(time) as day,
-					count(case when status='404 NOT FOUND' then 1 else null end) as error,
-					count(*) as total
-			from log
-			group by day)
+	SELECT day, round((error * 1.0/total)*100, 1) as percent
+	  from
+	    (SELECT date(time) as day,
+	    count(case when status='404 NOT FOUND' then 1 else null end) as error,
+	    count(*) as total
+		from log
+		group by day)
 		as visits
-
-		where ((error*1.0/total)*100) > 1;
+	where ((error*1.0/total)*100) > 1;
 	'''
 
     # execute our Query
