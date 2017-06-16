@@ -8,7 +8,7 @@ This Project is part of the Udacity Fullstack Nanodegree curriculum which focus 
 ## Project Summary
 A reporting tool that will use information from the database to discover what kind of articles the site's readers like.
 
-##Requirements
+## Requirements
 
   * [Python3](https://www.python.org/)
 
@@ -17,50 +17,52 @@ A reporting tool that will use information from the database to discover what ki
   * [VirtualBox](https://www.virtualbox.org/)
 
 
- ## Usage
+## Usage
 
-	* Download or Clone [fullstack-nanodegree-vm](https://github.com/udacity/fullstack-nanodegree-vm) repository.
+  * Download or Clone [fullstack-nanodegree-vm](https://github.com/udacity/fullstack-nanodegree-vm) repository.
 
-	* Download or Clone [log-analysis]
+  * Download or Clone [log-analysis]
 
-	*Unzip this folder after downloading it put the x and y in z diretory
+  *Unzip this folder after downloading it put the x and y in z diretory
 
-	* Launch the Vagrant VM inside Vagrant sub-directory in the downloaded fullstack-nanodegree-vm repository using command:
-	```
-		$ vagrant up
-	```
+  * Launch the Vagrant VM inside the fullstack-nanodegree-vm repository using command:
+  ```
+    $ vagrant up
+  ```
 
-	* Log into this using command:
-	```
-		$ vargrant ssh
-	```
+  * Log into this using command:
+  ```
+    $ vargrant ssh
+  ```
 
-	* Change directory to /vagrant
-	* Load the data and connect to database using command:
-	```
-		$ psql -d news -f newsdata.sql
+  * Change directory to /vagrant
+  
+  * Load the data and connect to database using command:
+  ```
+    $ psql -d news -f newsdata.sql
+  ```
 
 ## Running
-	*  Run `python reporting_tool.py`
+  *  Run `python reporting_tool.py`
 
- ## Output
+## Output
 
-	```
-	The most popular three articles of all time:
+  ```
+  The most popular three articles of all time:
 
-	    "Candidate is jerk, alleges rival" -- 338647 views
-	    "Bears love berries, alleges bear" -- 253801 views
-	    "Bad things gone, say good people" -- 170098 views
+	"Candidate is jerk, alleges rival" -- 338647 views
+	"Bears love berries, alleges bear" -- 253801 views
+	"Bad things gone, say good people" -- 170098 views
 
-	The most popular three authors of all time:
+  The most popular three authors of all time:
+  
+	Ursula La Multa -- 507594 views
+	Rudolf von Treppenwitz -- 423457 views
+	Anonymous Contributor -- 170098 views
+	Markoff Chaney -- 84557 views
 
-	    Ursula La Multa -- 507594 views
-	    Rudolf von Treppenwitz -- 423457 views
-	    Anonymous Contributor -- 170098 views
-	    Markoff Chaney -- 84557 views
+  The days on which more than 1% of requests lead to errors:
 
-	The days on which more than 1% of requests lead to errors:
+	2016-07-17 -- 2.3% errors
 
-	    2016-07-17 -- 2.3% errors
-
-	```
+  ```
