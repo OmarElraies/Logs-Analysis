@@ -1,4 +1,4 @@
-
+#!/bin/env python2.7
 # load the adapter
 import psycopg2
 
